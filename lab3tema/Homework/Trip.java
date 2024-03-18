@@ -1,21 +1,34 @@
-package Homework;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+/**
+ * Represents a trip consisting of attractions.
+ */
 public class Trip {
     private List<Attraction> attractions;
 
+    /**
+     * Constructs a new Trip object.
+     */
     public Trip() {
         attractions = new ArrayList<>();
     }
 
+    /**
+     * Adds an attraction to the trip.
+     * @param attraction The attraction to add.
+     */
     public void addAttraction(Attraction attraction) {
         attractions.add(attraction);
     }
 
+    /**
+     * Displays visitable non-payable locations sorted by opening hour.
+     * This method filters attractions that are visitable and not payable, sorts them by opening hour, and displays them.
+     */
     public void displayVisitableNonPayableLocations() {
         List<Attraction> visitableNonPayableLocations = new ArrayList<>();
 
@@ -36,6 +49,10 @@ public class Trip {
         }
     }
 
+    /**
+     * Returns a string representation of the Trip object.
+     * @return A string representation of the Trip object.
+     */
     @Override
     public String toString() {
         return "Trip{" +
